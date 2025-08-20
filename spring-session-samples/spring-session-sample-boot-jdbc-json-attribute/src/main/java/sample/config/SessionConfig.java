@@ -30,7 +30,6 @@ public class SessionConfig implements BeanClassLoaderAware {
 			UPDATE %TABLE_NAME%_ATTRIBUTES
 			SET ATTRIBUTE_BYTES = encode(?, 'escape')::jsonb
 			WHERE SESSION_PRIMARY_ID = ?
-			AND ATTRIBUTE_NAME = ?
 			""";
 
 	private ClassLoader classLoader;
